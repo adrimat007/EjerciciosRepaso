@@ -5,7 +5,7 @@
 import acm.graphics.*;
 import acm.program.GraphicsProgram;
 
-public class repaso1 extends GraphicsProgram{
+public class Repaso1 extends GraphicsProgram{
 
 	//declaro una variable instancia para guardar el rectángulo
 	GRect rectangulo;
