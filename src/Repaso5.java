@@ -8,7 +8,7 @@ import acm.program.GraphicsProgram;
  * 
  */
 
-public class Repaso3 extends GraphicsProgram {
+public class Repaso5 extends GraphicsProgram {
 	
 	
 	//declaro una varible de instancia para almacenar el rectangulo
@@ -24,7 +24,7 @@ public class Repaso3 extends GraphicsProgram {
 		//cambiamos el tamaño de la pantalla
 		setSize(400,400);
 		//creo el rectangulo de 120 de acho por 80 alto
-		rectangulo = new GRect(200,80);
+		rectangulo = new GRect(390,80);
 		add (rectangulo);
 		
 	}
@@ -33,7 +33,7 @@ public class Repaso3 extends GraphicsProgram {
 	public void run(){
 		distanciaX = getWidth()/2;
 		distanciaY= getHeight()/2;
-		rectangulo.setLocation(distanciaX-8, distanciaY);
+		rectangulo.setLocation((distanciaX)-(rectangulo.getWidth()/2), distanciaY - (rectangulo.getHeight()/2));
 	}
 
 }
