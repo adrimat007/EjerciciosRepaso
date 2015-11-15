@@ -78,7 +78,7 @@ public class Repaso10 extends GraphicsProgram {
 				rectangulo.move(-20, -20);
 			}
 			
-					
+					// test
 			if  ( distanciaAlCentroDelRectangulo < rectangulo.getWidth()/2 && distanciaAlAlturaDelRectangulo > rectangulo.getHeight()/2 ) {
 				
 				rectangulo.move(-20, -20);
