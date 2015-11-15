@@ -68,25 +68,27 @@ public class Repaso10 extends GraphicsProgram {
 			rectangulo.setFillColor(aleatorio.nextColor());
 			double distanciaAlCentroDelRectangulo = evento.getX()- rectangulo.getX();	
 			double distanciaAlAlturaDelRectangulo = evento.getY()- rectangulo.getY();	
-			
-			if  ( (distanciaAlCentroDelRectangulo > rectangulo.getWidth()/2) && (distanciaAlAlturaDelRectangulo < rectangulo.getHeight()/2)){
-				
-				rectangulo.move(20, 20);
-				
-			}else
-			{
-				rectangulo.move(-20, -20);
+
+			if ((distanciaAlAlturaDelRectangulo < rectangulo.getHeight()/2)){
+				if  ( (distanciaAlCentroDelRectangulo > rectangulo.getWidth()/2) ){
+
+					rectangulo.move(20, -20);
+				}else{
+					rectangulo.move(-20, -20);
+				}
 			}
-			
-					
-			if  ( distanciaAlCentroDelRectangulo < rectangulo.getWidth()/2 && distanciaAlAlturaDelRectangulo > rectangulo.getHeight()/2 ) {
-				
-				rectangulo.move(-20, -20);
-				
-			}else
-			{
-				rectangulo.move(-20,20);
+			if ((distanciaAlAlturaDelRectangulo > rectangulo.getHeight()/2)){
+				if  ( (distanciaAlCentroDelRectangulo > rectangulo.getWidth()/2) ){
+
+					rectangulo.move(20, 20);
+				}else{
+					rectangulo.move(-20, 20);
+				}
+
 			}
+
+
+
 			//add(rectangulo3,aleatorio.nextInt(getWidth()), aleatorio.nextInt(getHeight()));
 		}
 	}
