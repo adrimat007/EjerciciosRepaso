@@ -77,17 +77,7 @@ public class Repaso10 extends GraphicsProgram {
 					rectangulo.move(-20, -20);
 				}
 			}
-<<<<<<< HEAD
-			
-					// test
-			if  ( distanciaAlCentroDelRectangulo < rectangulo.getWidth()/2 && distanciaAlAlturaDelRectangulo > rectangulo.getHeight()/2 ) {
-				
-				rectangulo.move(-20, -20);
-				
-			}else
-			{
-				rectangulo.move(-20,20);
-=======
+// reparador todo
 			if ((distanciaAlAlturaDelRectangulo > rectangulo.getHeight()/2)){
 				if  ( (distanciaAlCentroDelRectangulo > rectangulo.getWidth()/2) ){
 
@@ -96,7 +86,7 @@ public class Repaso10 extends GraphicsProgram {
 					rectangulo.move(-20, 20);
 				}
 
->>>>>>> origin/master
+
 			}
 
 
