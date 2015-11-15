@@ -12,7 +12,7 @@ import acm.util.RandomGenerator;
  * 
  */
 
-public class Repaso8 extends GraphicsProgram {
+public class Repaso9 extends GraphicsProgram {
 
 
 	//declaro una varible de instancia para almacenar el rectangulo
@@ -76,7 +76,15 @@ public class Repaso8 extends GraphicsProgram {
 				rectangulo.move(-20, 0);
 			}
 			
-		
+			double distanciaAlAlturaDelRectangulo = evento.getY()- rectangulo.getY();			
+			if  ( distanciaAlAlturaDelRectangulo > rectangulo.getHeight()/2){
+				
+				rectangulo.move(0, 20);
+				
+			}else
+			{
+				rectangulo.move(0,-20);
+			}
 			//add(rectangulo3,aleatorio.nextInt(getWidth()), aleatorio.nextInt(getHeight()));
 		}
 	}

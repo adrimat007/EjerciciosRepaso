@@ -6,13 +6,13 @@ import acm.util.RandomGenerator;
 
 /*
  * Autor adrian ponce
- * repaso 8
+ * repaso 10
  * hacer el cuadrado se mueva hacia los lados
  * 
  * 
  */
 
-public class Repaso8 extends GraphicsProgram {
+public class Repaso10 extends GraphicsProgram {
 
 
 	//declaro una varible de instancia para almacenar el rectangulo
@@ -66,17 +66,27 @@ public class Repaso8 extends GraphicsProgram {
 
 			rectangulo.setFilled(true);
 			rectangulo.setFillColor(aleatorio.nextColor());
-			double distanciaAlCentroDelRectangulo = evento.getX()- rectangulo.getX();			
-			if  ( distanciaAlCentroDelRectangulo > rectangulo.getWidth()/2){
+			double distanciaAlCentroDelRectangulo = evento.getX()- rectangulo.getX();	
+			double distanciaAlAlturaDelRectangulo = evento.getY()- rectangulo.getY();	
+			
+			if  ( (distanciaAlCentroDelRectangulo > rectangulo.getWidth()/2) && (distanciaAlAlturaDelRectangulo < rectangulo.getHeight()/2)){
 				
-				rectangulo.move(20, 0);
+				rectangulo.move(20, 20);
 				
 			}else
 			{
-				rectangulo.move(-20, 0);
+				rectangulo.move(-20, -20);
 			}
 			
-		
+					
+			if  ( distanciaAlCentroDelRectangulo < rectangulo.getWidth()/2 && distanciaAlAlturaDelRectangulo > rectangulo.getHeight()/2 ) {
+				
+				rectangulo.move(-20, -20);
+				
+			}else
+			{
+				rectangulo.move(-20,20);
+			}
 			//add(rectangulo3,aleatorio.nextInt(getWidth()), aleatorio.nextInt(getHeight()));
 		}
 	}
