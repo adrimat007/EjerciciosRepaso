@@ -76,23 +76,63 @@ public class EjerciciosCoding extends ConsoleProgram {
 		}
 		return false;
 	}
+	
+	
+//	Suena	tu	móvil.	Crea	una	función	que	devuelva true	si	debes responder.	
+//	Normalmente	sí	contestas,	salvo	por	la	mañana, que	sólo	respondes	si	es	tu	madre.	
+//	En	todos	los	casos,	si	estás	dormido,	no	contestas.	
+//	contesta(boolean	matinal,	boolean	madre,	boolean	dormido)
+//	contesta (falso,	falso,	falso)	 verdadera	
+//	contesta (falso,	false,	true)	 falsa	
+//	contesta (true,	false,	false)	 falsa
 
-
+	public boolean contesta(boolean	matinal,boolean	madre,boolean dormido){
+		
+		if  (matinal && !madre){
+			return false;
+		}
+		if (dormido){
+			return false;
+	
+		}
+		if (matinal && madre){
+			return true;
+			}
+		return true;
+	}
+	
+//	Dados	tres	enteros,	a b c,	crea	una	función	que	devuelva true	si	uno	de	ellos	es	
+//	10	menos	que	uno	de	los	otros.	
+//	menorPor10 (1,	7,	11)	 verdadera	
+//	menorPor10 (1,	7,	10)	 falsa	
+//	menorPor10 (11,	1,	7)	 verdadera
+	
+	public boolean menorPor10(int a, int b, int c){
+		return true;
+	}
 
 
 	public void run(){
-
+		println("ejercicio 1");
 		println(ardilla(30, false));
 		println(ardilla(50, false));
 		println(ardilla(70, true));
-
+		println("ejercicio 2");
 		println(poli(60, false));
 		println(poli(65, false));
 		println(poli(65, true));
-
+		println("ejercicio 3");
 		println(muyVanidoso(22));		
 		println(muyVanidoso(23));	
 		println(muyVanidoso(24));	
+		println("ejercicio 4");
+		println(contesta( false, false, false));
+		println(contesta( false, false, true));
+		println(contesta( true, false,	false));
+		println("ejercicio 5");
+		println(menorPor10(1, 7, 11));
+		println(menorPor10(1, 7, 10));
+		println(menorPor10(11, 1, 7));
 	}
 
 }
